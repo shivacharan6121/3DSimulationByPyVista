@@ -1,0 +1,558 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 985,
+      "max": [
+        2.1341538429260254,
+        2.245145797729492,
+        3.827096700668335
+      ],
+      "min": [
+        -9.879289627075195,
+        -0.8608137369155884,
+        -3.827096700668335
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 11820,
+      "componentType": 5126,
+      "count": 985,
+      "max": [
+        1.0,
+        1.0,
+        0.9997722506523132
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.9998970627784729
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 985,
+      "max": [
+        0.9878137111663818,
+        0.990632951259613
+      ],
+      "min": [
+        0.0019492805004119873,
+        0.001992039382457733
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 3819,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 23640,
+      "componentType": 5126,
+      "count": 170,
+      "max": [
+        2.1785264015197754,
+        8.688047409057617,
+        1.759521484375
+      ],
+      "min": [
+        -1.02713942527771,
+        -8.570281982421875,
+        -1.7790031433105469
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 25680,
+      "componentType": 5126,
+      "count": 170,
+      "max": [
+        1.0,
+        0.9999998211860657,
+        0.9916509985923767
+      ],
+      "min": [
+        -0.9984568953514099,
+        -1.0,
+        -0.9838383793830872
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 7880,
+      "componentType": 5126,
+      "count": 170,
+      "max": [
+        0.9843649864196777,
+        0.9939289093017578
+      ],
+      "min": [
+        0.02454209327697754,
+        0.033483102917671204
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 15276,
+      "componentType": 5125,
+      "count": 432,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 27720,
+      "componentType": 5126,
+      "count": 170,
+      "max": [
+        1.6028329133987427,
+        8.629164695739746,
+        1.7692623138427734
+      ],
+      "min": [
+        -1.6028329133987427,
+        -8.629164695739746,
+        -1.7692623138427734
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 29760,
+      "componentType": 5126,
+      "count": 170,
+      "max": [
+        1.0,
+        0.9999998211860657,
+        0.9916509985923767
+      ],
+      "min": [
+        -0.9984568953514099,
+        -1.0,
+        -0.9838383793830872
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 9240,
+      "componentType": 5126,
+      "count": 170,
+      "max": [
+        0.9843649864196777,
+        0.9939289093017578
+      ],
+      "min": [
+        0.02454209327697754,
+        0.033483102917671204
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 17004,
+      "componentType": 5125,
+      "count": 432,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 225,
+      "max": [
+        7.0
+      ],
+      "min": [
+        0.0416666679084301
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 225,
+      "max": [
+        2.9794516563415527,
+        -0.27662020921707153,
+        6.049046993255615
+      ],
+      "min": [
+        2.9794516563415527,
+        -0.5924679040908813,
+        -6.076207160949707
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 900,
+      "componentType": 5126,
+      "count": 201,
+      "max": [
+        7.0
+      ],
+      "min": [
+        0.0416666679084301
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 201,
+      "max": [
+        0.37104371190071106,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "min": [
+        -0.37564417719841003,
+        0.0,
+        0.0,
+        0.9267639517784119
+      ],
+      "type": "VEC4"
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 4,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 4,
+            "path": "rotation"
+          }
+        }
+      ],
+      "name": "Take 001",
+      "samplers": [
+        {
+          "input": 12,
+          "interpolation": "LINEAR",
+          "output": 13
+        },
+        {
+          "input": 14,
+          "interpolation": "LINEAR",
+          "output": 15
+        }
+      ]
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Aditya Graphical (https://sketchfab.com/Adityakm)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/animated-jet-026e6a94b30c415ca671e40e03fbc94d",
+      "title": "Animated Jet"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 18732,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 10600,
+      "byteOffset": 18732,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 31800,
+      "byteOffset": 29332,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1704,
+      "byteOffset": 61132,
+      "name": "floatBufferViews"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2700,
+      "byteOffset": 62836,
+      "byteStride": 12,
+      "name": "floatBufferViews"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3216,
+      "byteOffset": 65536,
+      "byteStride": 16,
+      "name": "floatBufferViews"
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 68752,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/phong2_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/phongE1_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "phong2",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8942628736559436
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "phongE1",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8942628736559436
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "pSphere3_phong2_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "polySurface1_phongE1_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "polySurface2_phongE1_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "jet.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "Object_2"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5,
+        6,
+        8
+      ],
+      "name": "pSphere3",
+      "translation": [
+        2.9794516563415527,
+        -0.40083596110343933,
+        0.0
+      ]
+    },
+    {
+      "mesh": 0,
+      "name": "pSphere3_phong2_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "name": "polySurface1",
+      "rotation": [
+        -0.6122972965240479,
+        0.6122972965240479,
+        0.3536835312843323,
+        0.3536835312843323
+      ],
+      "scale": [
+        0.18658652901649475,
+        0.18658652901649475,
+        0.18658652901649475
+      ],
+      "translation": [
+        -3.6336252689361572,
+        -0.46343496441841125,
+        0.7819814682006836
+      ]
+    },
+    {
+      "mesh": 1,
+      "name": "polySurface1_phongE1_0"
+    },
+    {
+      "children": [
+        9
+      ],
+      "name": "polySurface2",
+      "rotation": [
+        0.6122972965240479,
+        0.6122972965240479,
+        0.3536835312843323,
+        -0.3536835312843323
+      ],
+      "scale": [
+        -0.18658652901649475,
+        -0.18658652901649475,
+        -0.18658652901649475
+      ],
+      "translation": [
+        -3.6446120738983154,
+        -0.5059691667556763,
+        -0.84416663646698
+      ]
+    },
+    {
+      "mesh": 2,
+      "name": "polySurface2_phongE1_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
