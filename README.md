@@ -157,6 +157,9 @@ python3 main.py
 * Zoom: **Scroll wheel**
 
 ---
+## 🎥 Output Video
+https://github.com/user-attachments/assets/3696cdcd-41e0-4041-8cc3-bd09c21160cf
+
 
 ## ⚙️ Customization
 
