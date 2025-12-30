@@ -22,7 +22,7 @@ The program reads a CSV trajectory file, animates missile and target motion usin
 ```
 project_root/
 │
-├── main.py                     # Simulation script
+├── plot.py                     # Simulation script
 ├── missile/
 │   └── scene.gltf              # Missile 3D model
 ├── r1/
@@ -139,7 +139,7 @@ sudo apt install python3-tk
 ## ▶️ How to Run
 
 ```bash
-python3 main.py
+python3 plot.py
 ```
 
 1. A file dialog will appear
@@ -210,11 +210,3 @@ Missile Trajectory & 3D Simulation
 
 ---
 
-If you want:
-
-* 📈 Radar view
-* 🧠 Guidance law overlay (PN, APN)
-* 🌍 Terrain / Earth curvature
-* 🎯 Multi-target scenarios
-
-just ask 🚀
