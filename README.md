@@ -158,8 +158,7 @@ python3 main.py
 
 ---
 ## 🎥 Output Video
-https://github.com/user-attachments/assets/3696cdcd-41e0-4041-8cc3-bd09c21160cf
-
+https://github.com/user-attachments/assets/fefc4a72-dd58-4f6d-8f23-8631319689d1
 
 ## ⚙️ Customization
 
