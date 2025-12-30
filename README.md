@@ -22,7 +22,7 @@ The program reads a CSV trajectory file, animates missile and target motion usin
 ```
 project_root/
 │
-├── plot.py                     # Simulation script
+├── pyvista.py                     # Simulation script
 ├── missile/
 │   └── scene.gltf              # Missile 3D model
 ├── r1/
@@ -139,7 +139,7 @@ sudo apt install python3-tk
 ## ▶️ How to Run
 
 ```bash
-python3 plot.py
+python3 pyvista.py
 ```
 
 1. A file dialog will appear
