@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import trimesh
 import pyvista as pv
-from pyvista import examples
 import tkinter as tk
 from tkinter import filedialog
 import time
@@ -63,6 +62,8 @@ def rotation_from_velocity(v):
 
     return Rz @ Ry
 
+
+
 # ============================================================
 # HEADING ANGLE
 # ============================================================
@@ -76,31 +77,29 @@ def heading_deg(v, mp, tp):
     los = los / nl
     return np.degrees(np.arccos(np.clip(np.dot(v, los), -1, 1)))
 
+
+
+
 # ============================================================
-# LOAD GLTF SAFELY (NO RGB ASSUMPTION)
+# LOAD GLTF
 # ============================================================
 def load_gltf(path, scale, base_rot):
     scene = trimesh.load(path, force="scene")
     mesh = trimesh.util.concatenate(scene.geometry.values())
-
     mesh.vertices -= mesh.vertices.mean(axis=0)
     mesh.apply_scale(scale)
     mesh.vertices = mesh.vertices @ base_rot.T
-
     return pv.PolyData(mesh.vertices, np.hstack(
         (np.full((len(mesh.faces),1),3), mesh.faces)
     ))
 
-
-
-# ============================================================
-# MODEL AXIS FIX
-# ============================================================
 MISSILE_ROT = np.array([[0,0,1],[0,1,0],[-1,0,0]])
 AIRCRAFT_ROT = np.array([[0,-1,0],[1,0,0],[0,0,1]])
 
 missile_mesh = load_gltf("./missile/scene.gltf", 2000, MISSILE_ROT)
 target_mesh  = load_gltf("./r1/scene.gltf", 800, AIRCRAFT_ROT)
+
+
 
 # ============================================================
 # PYVISTA SCENE
@@ -108,43 +107,39 @@ target_mesh  = load_gltf("./r1/scene.gltf", 800, AIRCRAFT_ROT)
 plotter = pv.Plotter(window_size=(1600,900))
 plotter.set_background("black")
 plotter.add_text("MISSILE Vs TARGET SIMULATION", position="upper_edge", font_size=16, color='white')
-
 plotter.show_axes()
-plotter.add_axes(x_color="red", y_color="green", z_color="blue", line_width=2)
 
-
-
-
-# ---- SAFE ADD_MESH (NO CRASH EVER) ----
+# ============================================================
+# MODEL ACTORS
+# ============================================================
 missile_actor = plotter.add_mesh(
     missile_mesh.copy(),
-    color="#00FFCC",
-    specular=0.8,
+    color="cyan",
     smooth_shading=True
 )
 
 target_actor = plotter.add_mesh(
     target_mesh.copy(),
     color="red",
-    specular=0.4,
-    smooth_shading=True,
-    opacity=0.5
+    opacity=0.6,
+    smooth_shading=True
 )
 
-# Trails
-missile_trail = pv.PolyData(missile_pos[:1])
-target_trail  = pv.PolyData(target_pos[:1])
+# ============================================================
+# ATTACHED PATH LINES (MODEL-FOLLOWING)
+# ============================================================
+missile_path = pv.PolyData(missile_pos[:1])
+missile_path.lines = np.array([1, 0])
+missile_path_actor = plotter.add_mesh(missile_path, color="cyan", line_width=2, opacity =0.2)
 
-plotter.add_mesh(missile_trail, color="cyan", line_width=2)
-plotter.add_mesh(target_trail, color="red", line_width=1)
-
-# SHOW GRID: Fixed Keyword Error
-#plotter.show_grid(color="white", grid=True, location='outer')
-
+target_path = pv.PolyData(target_pos[:1])
+target_path.lines = np.array([1, 0])
+target_path_actor = plotter.add_mesh(target_path, color="red", line_width=2, opacity=0.3)
 
 # HUD
-info = plotter.add_text("", position="upper_left", font_size=8, color="red")
+info = plotter.add_text("", position="upper_left", font_size=8, color="green")
 
+info.prop.opacity = 1.0
 
 # ============================================================
 # RECORD
@@ -158,9 +153,14 @@ plotter.show(interactive_update=True, auto_close=False)
 for i in range(hit_idx + 50):
     idx = min(i, hit_idx)
 
-    missile_trail.points = missile_pos[:idx+1]
-    target_trail.points  = target_pos[:idx+1]
+    # ---- UPDATE PATH LINES (ATTACHED) ----
+    missile_path.points = missile_pos[:idx+1]
+    missile_path.lines = np.hstack([[idx+1], np.arange(idx+1)])
 
+    target_path.points = target_pos[:idx+1]
+    target_path.lines = np.hstack([[idx+1], np.arange(idx+1)])
+
+    # ---- UPDATE MODELS ----
     missile_actor.mapper.dataset.points = (
         missile_mesh.points @ rotation_from_velocity(missile_vel[idx]).T
         + missile_pos[idx]
@@ -170,7 +170,7 @@ for i in range(hit_idx + 50):
         target_mesh.points @ rotation_from_velocity(target_vel[idx]).T
         + target_pos[idx]
     )
-
+    
     sep = np.linalg.norm(target_pos[idx] - missile_pos[idx])
     hdg = heading_deg(missile_vel[idx], missile_pos[idx], target_pos[idx])
 
@@ -188,6 +188,7 @@ for i in range(hit_idx + 50):
         f"HDG   : {hdg:.2f} deg\n"
         f"STAT  : {'HIT' if idx >= hit_idx else 'TRACK'}"
     ))
+
 
     plotter.render()
     plotter.write_frame()
